@@ -9,13 +9,13 @@ const browserSync = require('browser-sync').create()
 
 const path = { // 路徑
   src: { // 輸入
-    sass: '/sass/**/*.scss',
-    js: '/js/**/*.js',
-    html: '/*.html'
+    sass: 'sass/**/*.scss',
+    js: 'js/**/*.js',
+    html: '*.html'
     // ajax: './ajax/*.html'
   },
   dest: { // 輸出
-    css: '/stylesheets'
+    css: 'stylesheets'
   }
 }
 
@@ -33,7 +33,7 @@ gulp.task('style', () => {
 gulp.task('server', () => {
   // content
   browserSync.init({
-    server: '/',
+    server: './',
     index: 'index.html'
   })
 })
