@@ -1,0 +1,25 @@
+{
+    "name": "sstc.business.website",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "^7.2.6",
+        "browser-sync": "^2.24.7",
+        "eslint-config-airbnb-base": "^12.1.0",
+        "eslint-plugin-import": "^2.14.0",
+        "gulp": "^3.9.1",
+        "gulp-postcss": "^7.0.1",
+        "gulp-sass": "^4.0.1",
+        "gulp-sourcemaps": "^2.6.4"
+    },
+    "dependencies": {
+        "dateformat": "^3.0.3",
+        "npm": "^6.4.1"
+    },
+    "description": ""
+}
