@@ -44,13 +44,13 @@
   &-logo {
     width: 114px;
     height: 17px;
-    background: transparent url('/images/logotype-lg-dark.svg')center center no-repeat;
+    background: transparent url('images/logotype-lg-dark.svg')center center no-repeat;
   }
 }
 .section {
   // padding: 1.25rem 1.5rem;
   &-home {
-    // background: transparent url('/images/annie-spratt-133872-unsplash.jpg')center top no-repeat;
+    // background: transparent url('images/annie-spratt-133872-unsplash.jpg')center top no-repeat;
     // background-size: 100% auto;
     padding: 0;
     // display: flex;
@@ -112,18 +112,18 @@
             height: 100%;
             top: 0;
             left: 0;
-            background: url('/images/brooke-lark-230642-unsplash.jpg')center center no-repeat;
+            background: url('images/brooke-lark-230642-unsplash.jpg')center center no-repeat;
             background-size: 160% auto;
             filter: blur(5px);
           }
           &:nth-of-type(2) {
             .home-link-item-background {
-              background-image: url('/images/le-buzz-576478-unsplash.jpg');
+              background-image: url('images/le-buzz-576478-unsplash.jpg');
             }
           }
           &:nth-of-type(3) {
             .home-link-item-background {
-              background-image: url('/images/food-photographer-jennifer-pallian-306919-unsplash.jpg');
+              background-image: url('images/food-photographer-jennifer-pallian-306919-unsplash.jpg');
             }
           }
         }
