@@ -1,4 +1,12 @@
 html {
   font-family: Arial, Helvetica, sans-serif;
   color: #3f5d45;
+  line-height: 2rem;
+}
+a {
+  color: #3f5d45;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
