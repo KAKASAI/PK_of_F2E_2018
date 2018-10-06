@@ -1,6 +1,10 @@
+$font_color-prime: #3f5d45;
+$font_color-prime_reverse: #eaf0ed;
+$bg_color-dark: #3f5d45;
+$bg_color-light: #eaf0ed;
 .header {
   display: flex;
-  align-items: center;
+  // align-items: center;
   justify-content: space-between;
   padding: 1.25rem 1.5rem;
   &-menu {
@@ -44,28 +48,33 @@
   &-logo {
     width: 114px;
     height: 17px;
-    background: transparent url('/images/logotype-lg-dark.svg')center center no-repeat;
+    background: transparent url('../images/logotype-lg-dark.svg')center center no-repeat;
   }
 }
 .section {
   // padding: 1.25rem 1.5rem;
   &-home {
-    // background: transparent url('/images/annie-spratt-133872-unsplash.jpg')center top no-repeat;
+    // background: transparent url('../images/annie-spratt-133872-unsplash.jpg')center top no-repeat;
     // background-size: 100% auto;
-    padding: 0;
+    // padding: 0;
     // display: flex;
     // height: 70vh;
     // flex-wrap: wrap;
-    align-items: flex-end;
+    // align-items: flex-end;
     .home {
       &-main_theme {
         padding: 0;
         // font-size: 0;
         line-height: 0;
-        img {
-          flex-basis: 100%;
-          max-width: 100%;
-          height: auto;
+        position: relative;
+        &-slogan {
+          position: absolute;
+          right: 1.875rem;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          width: 3.75rem;
+          height: 80%;
         }
       }
       &-link {
@@ -98,9 +107,9 @@
             justify-content: center;
             font-weight: bold;
             padding: 2.5rem 0;
-            background-color: rgba(#3f5d45, 0.8);
+            background-color: rgba($bg_color-dark, 0.8);
             &:hover {
-              color: #3f5d45;
+              color: $font_color-prime;
               background-color: rgba(#ffe180, 0.8);
               text-decoration: none;
             }
@@ -112,18 +121,18 @@
             height: 100%;
             top: 0;
             left: 0;
-            background: url('/images/brooke-lark-230642-unsplash.jpg')center center no-repeat;
+            background: url('https://bit.ly/2R5tqwD')center center no-repeat;
             background-size: 160% auto;
             filter: blur(5px);
           }
           &:nth-of-type(2) {
             .home-link-item-background {
-              background-image: url('/images/le-buzz-576478-unsplash.jpg');
+              background-image: url('https://bit.ly/2Dwoxd7');
             }
           }
           &:nth-of-type(3) {
             .home-link-item-background {
-              background-image: url('/images/food-photographer-jennifer-pallian-306919-unsplash.jpg');
+              background-image: url('https://bit.ly/2OUteif');
             }
           }
         }
@@ -152,16 +161,290 @@
       }
     }
     &-content {
-      background-color: #eaf0ed;
+      background-color: $bg_color-light;
       padding: 1.25rem 1.5rem;
       font-weight: lighter;
     }
   }
+  &-with_items {
+    padding: 1.25rem 1.5rem;
+  }
+}
+.shop_item {
+  &-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.875rem;
+  }
+  &-label {
+    position: absolute;
+    z-index: 1;
+    writing-mode: vertical-lr;
+    top: 0;
+    left: 1.25rem;
+    font-weight: bold;
+    color: $font_color-prime_reverse;
+    background-color: $bg_color-dark;
+    padding: 1rem .5rem;
+  }
+  &-favorite {
+    position: absolute;
+    z-index: 1;
+    top: 1.25rem;
+    right: 1.5rem;
+    cursor: pointer;
+  }
+  &-pic {
+    flex-basis: 75%;
+    font-size: 0;
+    // max-width: 315px;
+    max-height: 315px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-info {
+    flex-basis: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 1.25rem;
+    border-left: 1px solid #eaf0ed;
+    border-right: 1px solid #eaf0ed;
+    &-name {
+      flex-basis: 60%;
+      padding: 0.875rem;
+      border-right: 1px solid #eaf0ed;
+    }
+    &-price {
+      flex-basis: 40%;
+      font-weight: bold;
+      padding: 0.875rem;
+    }
+  }
+  &-push_in_cart {
+    flex-basis: 15%;
+    font-size: 1.5rem;
+    padding: 1rem;
+    font-weight: bold;
+    color: $font_color-prime;
+    background-color: $bg_color-light;
+  }
+}
+.pagenation {
+  &-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-item {
+    font-size: 1.25rem;
+    padding: 1rem 1.5rem;
+    &.selected {
+      background-color: $bg_color-dark;
+      color: $font_color-prime_reverse;
+    }
+  }
+}
+.option_list {
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  &-title {
+    background-color: $bg_color-dark;
+    color: $font_color-prime_reverse;
+    padding: 1rem;
+  }
+  &-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &-item {
+    // text-align: center;
+    // font-size: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #eaf0ed;
+    &.selected {
+      background-color: $bg_color-light;
+    }
+    &-count {
+      &::before {
+        display: inline-block;
+        content: '\0028';
+        padding-left: .5rem;
+      }
+      &::after {
+        display: inline-block;
+        content: '\0029';
+        padding-right: .5rem;
+      }
+    }
+  }
+}
+.login_box {
+  &-title {
+    font-size: 2.25rem;
+    padding: 1.875rem;
+    text-align: center;
+    background-color: $bg_color-dark;
+    color: $font_color-prime_reverse;
+  }
+  &-thirdparty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg_color-light;
+    padding: 1.875rem;
+    .thirdparty {
+      &-item {
+        font-size: 0;
+        flex-basis: (100% / 3);
+        background-color: #fff;
+        padding: 1.25rem 1rem;
+        border: 1px solid $bg_color-light;
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+  &-by_mail {
+    padding: 1.875rem;
+    background-color: $bg_color-dark;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &-item {
+      background-color: $bg_color-light;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+       > i[class^="material"] {
+        padding: 1rem;
+      }
+      input {
+        border: none;
+        background-color: transparent;
+      }
+    }
+    &-checkbox {
+      color: $font_color-prime_reverse;
+    }
+  }
+  &-btn_login {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #ffe180;
+    width: 100%;
+    padding: 1rem;
+  }
+}
+.cart_box {
+  &-title {
+    color: $font_color-prime;
+    background-color: $bg_color-light;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+  }
+  &-item_group {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1.875rem;
+    &-pic {
+      flex-basis: 50%;
+      max-height: 106px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &-info_group {
+      flex-basis: 50%;
+      .info_group {
+        display: flex;
+        flex-direction: column;
+        &-product {
+          flex-basis: 50%;
+          padding-left: 1rem;
+          &-name {
+            font-size: 1.25rem;
+          }
+        }
+        &-quantity {
+          flex-basis: 50%;
+          padding-left: 1rem;
+          display: flex;
+          .quantity {
+            &-item {
+              flex-basis: (100% / 3);
+              text-align: center;
+              border: 1px solid $bg_color-light;
+              // display: inline-block;
+            }
+          }
+        }
+      }
+    }
+    &-total_price {
+      margin: 0.5rem 0;
+      padding: 0.5rem 0;
+      flex-basis: 100%;
+      border-top: 1px solid $bg_color-light;
+      border-bottom: 1px solid $bg_color-light;
+      text-align: right;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    &-remove {
+      display: none;
+    }
+  }
+}
+.cart_box_summary {
+  &-box {
+    padding: 1rem 1.875rem;
+  }
+  &-title {
+    font-size: 1.25rem;
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+    background-color: $bg_color-light;
+  }
+  &-content {
+    padding: .5rem 0;
+    .content {
+      &-list {
+        display: flex;
+        justify-content: space-between;
+        &.total_price {
+          font-weight: bold;
+          font-size: 1.25rem;
+          padding-top: 1rem;
+        }
+      }
+    }
+  }
+  &-btn_check_out {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 1rem;
+    background-color: #ffe180;
+    width: 100%;
+  }
 }
 .footer {
-  background-color: #eaf0ed;
+  background-color: $bg_color-light;
   &-subscription {
-    background-color: #3f5d45;
+    background-color: $bg_color-dark;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -172,13 +455,14 @@
         flex-basis: 50%;
         width: 100%;
         font-size: 1.5rem;
-        color: #eaf0ed;
+        color: $font_color-prime_reverse;
         display: flex;
         padding: 1.25rem;
-        justify-content: space-around;
+        // justify-content: space-around;
         &-img {
           width: 40px;
           height: 40px;
+          margin: auto 1.25rem;
         }
       }
       &-mailbox {
@@ -187,7 +471,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #eaf0ed;
+        background-color: $bg_color-light;
         &-label {
           // padding: 1.25rem 1.5rem;
           padding: 0 1.25rem;

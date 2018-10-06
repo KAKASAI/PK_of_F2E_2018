@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheets/all.css">
+  <title>Sweetast</title>
+</head>
+
+<body>
+  <header class="header">
+    <ul class="header-menu">
+      <li class="menu-item">
+        <a href="javascript:;" class="menu-item-hamburger"><i class="material-icons">menu</i></a>
+        <ul class="menu-item-submenu">
+          <li class="menu-item-submenu-item"><a href="index.html">首頁</a></li>
+          <li class="menu-item-submenu-item"><a href="product.html">甜點</a></li>
+          <li class="menu-item-submenu-item"><a href="login.html">登入</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="header-logo"></div>
+    <a href="cart.html" class="header-shooping_cart"><i class="material-icons">shopping_cart</i></a>
+  </header>
+  <section class="section">
+    <div class="login_box">
+      <div class="login_box-title">會員登入</div>
+      <div class="login_box-thirdparty">
+        <button type="button" class="thirdparty-item"><img src="images/ic-facebook-logotype.svg" alt=""></button>
+        <button type="button" class="thirdparty-item"><img src="images/ic-google.svg" alt=""></button>
+        <button type="button" class="thirdparty-item"><img src="images/ic-yahoo.svg" alt=""></button>
+      </div>
+      <div class="login_box-by_mail">
+        <label for="loginBoxAccount" class="login_box-by_mail-item">
+          <i class="material-icons">person</i>
+          <input type="email" name="" id="loginBoxAccount" placeholder="電子信箱/手機號碼">
+        </label>
+        <label for="loginBoxPassword" class="login_box-by_mail-item">
+          <i class="material-icons">vpn_key</i>
+          <input type="password" name="" id="loginBoxPassword" placeholder="請輸入使用者密碼">
+        </label>
+        <label for="loginBoxRemember" class="login_box-by_mail-checkbox">
+          <input type="checkbox" name="" id="loginBoxRemember">
+          記住我
+        </label>
+      </div>
+      <button type="button" class="login_box-btn_login">登入帳號</button>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-subscription">
+      <div class="subscription-title">
+        <img src="images/logo-light.svg" class="subscription-title-img">
+        訂閱你我的甜蜜郵件
+      </div>
+      <div class="subscription-mailbox">
+        <label for="mailSubscription" class="subscription-mailbox-label">
+          <i class="material-icons">email</i>
+          <input type="email" id="mailSubscription" class="subscription-mailbox-input">
+        </label>
+        <i class="material-icons subscription-mailbox-btn">arrow_forward</i>
+      </div>
+    </div>
+    <div class="footer-content">
+      <img src="images/logotype-lg-dark.svg" class="content-title">
+      <ul class="content-info">
+        <li>07-1234-5678</li>
+        <li>sweetaste@email.com</li>
+        <li>800 高雄市新興區幸福路 520 號</li>
+      </ul>
+      <div class="content-social_link">
+        <img src="images/ic-line@.svg" alt="" class="content-social_link-item"><a href=""></a>
+        <img src="images/ic-facebook.svg" alt="" class="content-social_link-item"><a href=""></a>
+      </div>
+      <div class="content-copywriter">&#169; 2018 Sweetaste* All Rights Reserved</div>
+    </div>
+  </footer>
+  <script src="/js/all.js"></script>
+</body>
+
+</html>

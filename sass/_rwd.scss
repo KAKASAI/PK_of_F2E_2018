@@ -1,0 +1,27 @@
+@media only screen and (min-width: 1024px) {
+  .section {
+    &-home {
+      .home {
+        &-main_theme {
+          padding: 0 2.625rem;
+          max-height: 496px;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+        }
+        &-link-group {
+          max-width: 80%;
+          margin: auto;
+          margin-top: -5%;
+        }
+      }
+    }
+  }
+  .footer {
+    &-subscription {
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 1.875rem 10vw;
+    }
+  }
+}
