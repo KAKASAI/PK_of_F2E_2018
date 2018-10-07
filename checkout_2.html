@@ -27,8 +27,71 @@
     <a href="cart.html" class="header-shooping_cart"><i class="material-icons">shopping_cart</i></a>
   </header>
   <section class="section">
+    <div class="progress_box">
+      <div class="progress_box-header">
+        <div class="progress_box-title">付款</div>
+        <div class="progress_box-step_box">
+          <div class="step_box-item down"></div>
+          <div class="step_box-line down"></div>
+          <div class="step_box-item current"></div>
+          <div class="step_box-line"></div>
+          <div class="step_box-item"></div>
+        </div>
+      </div>
+      <div class="progress_box-form">
+        <label for="progressBoxLastName" class="col-50">
+          姓氏
+          <input type="text" name="" id="progressBoxLastName" class="label_input" placeholder="王">
+        </label>
+        <label for="progressBoxFirstName" class="col-50">
+          名字
+          <input type="text" name="" id="progressBoxFirstName" class="label_input" placeholder="小明">
+        </label>
+        <label for="progressBoxCells" class="col-100">
+          電話
+          <input type="tel" name="" id="progressBoxCells" class="label_input" placeholder="0912-345-678">
+        </label>
+        <label class="col-50">
+          地址
+          <select name="" id="">
+            <option value="0">高雄市</option>
+            <option value="0">台南市</option>
+          </select>
+        </label>
+        <label class="col-50">
+          <select name="" id="">
+            <option value="0">高雄市</option>
+            <option value="0">台南市</option>
+          </select>
+        </label>
+        <label class="col-100">
+          <input type="tel" name="" id="progressBoxCells" class="label_input" placeholder="幸福路520號""">
+        </label>
+      </div>
+      <a href="checkout_2.html" class="progress_box-btn_login">下一步</a>
+    </div>
+    <div class="progress_box-aside">
+      <div class="cart_box_summary">
+      <div class="cart_box_summary-box">
+        <div class="cart_box_summary-title">訂單摘要</div>
+        <div class="cart_box_summary-content">
+          <div class="content-list">
+            <div class="content-list-item">小計</div>
+            <div class="content-list-item">NT$ 2,700</div>
+          </div>
+          <div class="content-list">
+            <div class="content-list-item">運費</div>
+            <div class="content-list-item">NT$ 300</div>
+          </div>
+          <div class="content-list total_price">
+            <div class="content-list-item">總計</div>
+            <div class="content-list-item">NT$ 3,000</div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="cart_box">
-      <div class="cart_box-title">您的購物車</div>
+      <div class="cart_box-title">購物清單</div>
       <div class="cart_box-item_group">
         <div class="cart_box-item_group-pic"><img src="https://bit.ly/2QvsT63" alt=""></div>
         <div class="cart_box-item_group-info_group">
@@ -83,27 +146,8 @@
           <i class="material-icons md-light">delete</i>
         </div>
       </div>
-    </div>
-    <div class="cart_box_summary">
-      <div class="cart_box_summary-box">
-        <div class="cart_box_summary-title">訂單摘要</div>
-        <div class="cart_box_summary-content">
-          <div class="content-list">
-            <div class="content-list-item">小計</div>
-            <div class="content-list-item">NT$ 2,700</div>
-          </div>
-          <div class="content-list">
-            <div class="content-list-item">運費</div>
-            <div class="content-list-item">NT$ 300</div>
-          </div>
-          <div class="content-list total_price">
-            <div class="content-list-item">總計</div>
-            <div class="content-list-item">NT$ 3,000</div>
-          </div>
-        </div>
-      </div>
-      <a href="checkout_1.html" class="cart_box_summary-btn_check_out">結帳</a>
-    </div>
+    </div> 
+    </div>       
   </section>
   <footer class="footer">
     <div class="footer-subscription">
