@@ -31,47 +31,31 @@
       <div class="progress_box">
         <div class="progress_box-container">
           <div class="progress_box-header">
-            <div class="progress_box-title">運送</div>
+            <div class="progress_box-title">發票</div>
             <div class="step_box">
+              <div class="step_box-item down"></div>
+              <div class="step_box-line down"></div>
+              <div class="step_box-item down"></div>
+              <div class="step_box-line down"></div>
               <div class="step_box-item current"></div>
-              <div class="step_box-line"></div>
-              <div class="step_box-item"></div>
-              <div class="step_box-line"></div>
-              <div class="step_box-item"></div>
             </div>
           </div>
           <div class="progress_box-form">
-            <label for="progressBoxLastName" class="col-50">
-              姓氏
-              <input type="text" name="" id="progressBoxLastName" class="label_input" placeholder="王">
+            <div class="tab_switcher">
+              <div class="tab_switcher-item selected"><a href="checkout_3-1.html">電子發票</a></div>
+              <div class="tab_switcher-item"><a href="checkout_3-2.html">郵寄發票</a></div>
+            </div>
+            <label for="progressBoxEmail" class="col-100">
+              電子郵件信箱
+              <input type="email" name="" id="progressBoxEmail" class="label_input" placeholder="example@email.com">
             </label>
-            <label for="progressBoxFirstName" class="col-50">
-              名字
-              <input type="text" name="" id="progressBoxFirstName" class="label_input" placeholder="小明">
-            </label>
-            <label for="progressBoxCells" class="col-100">
-              電話
-              <input type="tel" name="" id="progressBoxCells" class="label_input" placeholder="0912-345-678">
-            </label>
-            <label class="col-50">
-              地址
-              <select name="" id="">
-                <option value="0">高雄市</option>
-                <option value="0">台南市</option>
-              </select>
-            </label>
-            <label class="col-50">
-              <select name="" id="">
-                <option value="0">高雄市</option>
-                <option value="0">台南市</option>
-              </select>
-            </label>
-            <label class="col-100">
-              <input type="tel" name="" id="progressBoxCells" class="label_input" placeholder="幸福路520號""">
+            <label for="progressBoxTaxIDNumber" class="col-100">
+              統一編號（選填）
+              <input type="number" name="" id="progressBoxTaxIDNumber" class="label_input" placeholder="12345678">
             </label>
           </div>
         </div>
-        <a href="checkout_2.html" class="progress_box-btn_login">下一步</a>
+        <a href="checkout_success.html" class="progress_box-btn_login">確認結帳</a>
       </div>
       <div class="progress_box-aside">
         <div class="cart_box_summary">

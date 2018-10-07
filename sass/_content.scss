@@ -4,7 +4,7 @@ $bg_color-dark: #3f5d45;
 $bg_color-light: #eaf0ed;
 .header {
   display: flex;
-  // align-items: center;
+  align-items: center;
   justify-content: space-between;
   padding: 1.25rem 1.5rem;
   &-menu {
@@ -14,6 +14,17 @@ $bg_color-light: #eaf0ed;
     .menu {
       &-item {
         position: relative;
+        &:hover {
+          .menu-item-submenu {
+            z-index: 1;
+            opacity: 1;
+            visibility: visible;
+            background-color: $bg_color-light;
+          }
+        }
+        &-hamburger {
+          display: flex;
+        }
         &-submenu {
           list-style: none;
           position: absolute;
@@ -32,15 +43,6 @@ $bg_color-light: #eaf0ed;
             padding-left: 0;
             white-space: nowrap;
           }
-          &.active {
-            height: 50px;
-            z-index: 1;
-            opacity: 1;
-            visibility: visible;
-            .menu-item-submenu-item {
-              background-color: #fff;
-            }
-          }
         }
       }
     }
@@ -49,6 +51,9 @@ $bg_color-light: #eaf0ed;
     width: 114px;
     height: 17px;
     background: transparent url('../images/logotype-lg-dark.svg')center center no-repeat;
+  }
+  &-shooping_cart {
+    display: flex;
   }
 }
 .section {
@@ -67,13 +72,16 @@ $bg_color-light: #eaf0ed;
         // font-size: 0;
         line-height: 0;
         position: relative;
+        img {
+          width: 100%;
+        }
         &-slogan {
           position: absolute;
-          right: 1.875rem;
+          right: 2.5rem;
           top: 0;
           bottom: 0;
           margin: auto;
-          width: 3.75rem;
+          // width: 3.75rem;
           height: 80%;
         }
       }
@@ -97,6 +105,7 @@ $bg_color-light: #eaf0ed;
             // position: absolute;
             z-index: 1;
             width: 100%;
+            letter-spacing: .5rem;
             top: 0;
             left: 0;
             right: 0;
@@ -145,6 +154,9 @@ $bg_color-light: #eaf0ed;
       // font-size: 0;
       line-height: 0;
       padding: 2rem 0;
+      &-vertical {
+        display: none;
+      }
       img {
         max-width: 60%;
       }
@@ -168,6 +180,14 @@ $bg_color-light: #eaf0ed;
   }
   &-with_items {
     padding: 1.25rem 1.5rem;
+    &-title {
+      text-align: center;
+      line-height: 0;
+      padding: 2rem 0;
+      &-vertical {
+        display: none;
+      }
+    }
   }
 }
 .shop_item {
@@ -204,6 +224,9 @@ $bg_color-light: #eaf0ed;
     display: flex;
     align-items: center;
     justify-content: center;
+    img {
+      max-width: 160%;
+    }
   }
   &-info {
     flex-basis: 10%;
@@ -301,6 +324,9 @@ $bg_color-light: #eaf0ed;
     background-color: $bg_color-light;
     padding: 1.875rem;
     .thirdparty {
+      &-title {
+        display: none;
+      }
       &-item {
         font-size: 0;
         flex-basis: (100% / 3);
@@ -410,71 +436,28 @@ $bg_color-light: #eaf0ed;
   }
 }
 .progress_box {
+  background-color: $bg_color-dark;
+  &-container {
+    padding: 1.875rem;
+  }
   &-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 2.25rem;
     font-weight: bold;
-    padding: 1.875rem;
-    background-color: $bg_color-dark;
+    padding-bottom: 1.875rem;
     color: $font_color-prime_reverse;
   }
   &-title {
     // text-align: center;
     flex-basis: 50%;
   }
-  &-step_box {
-    flex-basis: 50%;
-    height: 2.25rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .step_box {
-      &-item {
-        flex-basis: 1rem;
-        width: 1rem;
-        height: 1rem;
-        border-radius: 50%;
-        border: 1px solid #8da291;
-        &.current {
-          background-color: $bg_color-light;
-          border: 1px solid $bg_color-dark;
-          box-shadow: 0 0 0px 2px #8da291;
-        }
-        &.down {
-          background-color: $bg_color-light;
-          border-color: $bg_color-light;
-          box-shadow: none;
-          position: relative;
-          &::before {
-            position: absolute;
-            display: flex;
-            content: '\2713';
-            font-size: .75rem;
-            align-items: center;
-            justify-content: center;
-            color: $font_color-prime;
-            width: 100%;
-            height: 100%;
-          }
-        }
-      }
-      &-line {
-        flex-basis: calc(100% / 3);
-        background-color: #8da291;
-        height: 1px;
-        &.down {
-          background-color: $bg_color-light;
-        }
-      }
-    }
-  }
   &-form {
     font-size: 1.25rem;
     color: $font_color-prime_reverse;
     background-color: $bg_color-dark;
-    padding: 1.875rem;
+    // padding: 0 1.875rem;
   }
   &-btn_login {
     text-align: center;
@@ -488,16 +471,45 @@ $bg_color-light: #eaf0ed;
   &-aside {
     display: none;
   }
+  &-success {
+    background: transparent url('https://bit.ly/2P7GhNd') center center no-repeat;
+    background-size: auto 100%;
+    &-container {
+      max-width: 50%;
+      margin: auto;
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .step_box {
+      margin-bottom: 1.5rem;
+      &-item {
+        flex-basis: 1.25rem;
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+      .down {
+        background-color: $bg_color-dark;
+        &::before {
+          color: $font_color-prime_reverse;
+        }
+      }
+    }
+  }
   [class^='col'] {
     display: inline-block;
     font-weight: bold;
-    padding-top: 1rem;
+    padding-bottom: 1rem;
     input,
     select {
+      color: #8da291;
       font-size: 1rem;
       width: 100%;
       padding: 1rem 1.25rem;
       background-color: $bg_color-light;
+      border: none;
+      margin-top: .5rem;
     }
   }
   .col-50 {
@@ -505,6 +517,84 @@ $bg_color-light: #eaf0ed;
   }
   .col-100 {
     width: 100%;
+  }
+  .label_with_input_icon {
+    position: relative;
+    i {
+      position: absolute;
+      right: 1.25rem;
+      bottom: 1.875rem;
+      color: $font_color-prime;
+    }
+  }
+}
+.step_box {
+  flex-basis: 50%;
+  height: 2.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-item {
+    flex-basis: 1rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 1px solid #8da291;
+    &.current {
+      background-color: $bg_color-light;
+      border: 1px solid $bg_color-dark;
+      box-shadow: 0 0 0px 2px #8da291;
+    }
+    &.down {
+      background-color: $bg_color-light;
+      border-color: $bg_color-light;
+      box-shadow: none;
+      position: relative;
+      &::before {
+        position: absolute;
+        display: flex;
+        content: '\2713';
+        font-size: .75rem;
+        align-items: center;
+        justify-content: center;
+        color: $font_color-prime;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &-line {
+    flex-basis: calc(100% / 3);
+    background-color: #8da291;
+    height: 1px;
+    &.down {
+      background-color: $bg_color-light;
+    }
+  }
+}
+.tab_switcher {
+  display: flex;
+  margin-bottom: 1.875rem;
+  &-item {
+    flex-basis: 50%;
+    padding: .875rem;
+    background-color: $bg_color-dark;
+    border: 1px solid $bg_color-light;
+    a {
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 1.25rem;
+      font-weight: bold;
+      display: inline-block;
+      color: $font_color-prime_reverse;
+    }
+    &.selected {
+      background-color: $bg_color-light;
+      a {
+        color: $font_color-prime;
+      }
+    }
   }
 }
 .cart_box_summary {
@@ -559,11 +649,13 @@ $bg_color-light: #eaf0ed;
         color: $font_color-prime_reverse;
         display: flex;
         padding: 1.25rem;
+        white-space: nowrap;
+        align-items: center;
         // justify-content: space-around;
         &-img {
           width: 40px;
           height: 40px;
-          margin: auto 1.25rem;
+          margin-right: 1.25rem;
         }
       }
       &-mailbox {
@@ -576,12 +668,12 @@ $bg_color-light: #eaf0ed;
         &-label {
           // padding: 1.25rem 1.5rem;
           padding: 0 1.25rem;
-          margin-top: auto;
-          margin-bottom: 0.1rem;
+          display: flex;
         }
         &-input {
           background-color: transparent;
           border: none;
+          width: 100%;
         }
         &-btn {
           background-color: #ffe180;
@@ -598,6 +690,10 @@ $bg_color-light: #eaf0ed;
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
+    &-item {
+      display: flex;
+      flex-direction: column;
+    }
     .content {
       &-title {
         width: 50%;
@@ -614,6 +710,10 @@ $bg_color-light: #eaf0ed;
         &-item {
           width: 2rem;
         }
+      }
+      &-slogan {
+        width: 60px;
+        display: none;
       }
     }
   }
